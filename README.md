@@ -1,3 +1,3 @@
 # Övningsuppgifter
 
-- 01-html-receptet/ (HTML Receptet)
+- 01-html-receptet.html (HTML Receptet)
