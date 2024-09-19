@@ -1,0 +1,82 @@
+:root {
+  --box-height: 30vmin;
+  --border-size: 1.3vmin;
+  --box-border-size: clamp(10px, 2.5vmin, 20px);
+  /* --box-border-size: 2.7vmin; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.container {
+  width: fit-content;
+  background-color: white;
+  padding: var(--border-size);
+}
+
+.box {
+  position: relative;
+  height: var(--box-height);
+  aspect-ratio: 1 / 1;
+  margin-bottom: var(--border-size);
+  border: var(--box-border-size) solid black;
+}
+
+.box:last-of-type {
+  margin-bottom: 0;
+}
+
+.box::after {
+  position: absolute;
+  content: "";
+}
+
+.red {
+  background-color: red;
+  border-color: #910000;
+}
+
+.red::after {
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #ff8b8b;
+}
+
+.yellow {
+  background-color: yellow;
+  border-color: #b89515;
+}
+
+.yellow::after {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #ffffb4;
+}
+
+.green {
+  background-color: green;
+  border-color: #005100;
+}
+
+.green::after {
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #88b888;
+}
