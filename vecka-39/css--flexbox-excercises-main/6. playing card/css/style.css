@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  background-color: lightgray;
+}
+
+article.card {
+  height: 400px;
+  width: 270px;
+  padding: 0 .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  border: 10px solid white;
+  border-radius: 10px;
+  color: red;
+  font-size: 70px;
+}
+
+aside {
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+  align-self: flex-start;
+
+}
+
+aside.bottom {
+  transform: rotate(180deg);
+  align-self: flex-end;
+}
+
+aside span {
+  display: block;
+  color: gray;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
