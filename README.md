@@ -6,4 +6,5 @@
 - 02-trafikljuset-min.html (Tävling: Lös uppgiften med så lite rader som möjligt i HTML och CSS-filerna, inkl. Prettier formatering. Resultat: 58 rader)
 
 ## Vecka 39
-- css--flexbox-excercises-main/ (Flexbox övningar)
+- css--flexbox-excercises-main/ (Flexbox-övningar)
+- code-along/ (Code along flexbox övning onsdag 25/9)

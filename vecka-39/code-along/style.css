@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: .5s;
+}
+
+:root {
+  --primary: #e342a3;
+  --secondary: #ffba3a;
+  --text: #aa2137;
+  --border: #95294ff2;
+  --border-transparent: #9a003643;
+  --plan-bg: #8d003d32;
+  --plan-bg-hover: #8d003d64;
+  --box-shadow: #a230584b;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  font-size: 1.6em;
+  background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.pricing-grid {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.plan {
+  min-width: 210px;
+  max-width: 260px;
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--plan-bg);
+  color: white;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--box-shadow);
+
+  h2 {
+    margin-top: auto;
+  }
+
+  .price {
+    margin-top: auto;
+  }
+
+  p:first-of-type {
+    font-style: italic;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--border-transparent);
+    background: var(--plan-bg-hover);
+
+    .cta {
+      border-radius: 2px;
+      transform: scale(1.1);
+      background-color: white;
+    }
+  }
+}
+
+h2 {
+  margin-bottom: .5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+p {
+  margin: 1rem 0;
+}
+
+.features {
+  list-style: none;
+  li {
+    padding: .3rem 0;
+  }
+  * + * {
+    border-top: 1px solid var(--border);
+  }
+}
+
+.cta {
+  padding: 1rem 1.4rem;
+  background: var(--secondary);
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+  /* border: 1px solid var(--border); */
+  box-shadow: 0 0 6px var(--box-shadow);
+  border-radius: 8px;
+
+  &:hover {
+    color: var(--primary);
+    transform: scale(2);
+    text-decoration: underline 1px var(--primary);
+    text-underline-offset: 4px;
+  }
+}
+
+.price {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
