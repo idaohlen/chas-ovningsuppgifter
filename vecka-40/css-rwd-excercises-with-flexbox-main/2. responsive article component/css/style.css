@@ -1,0 +1,107 @@
+:root {
+  --base-font: Raleway, sans-serif;
+  --accent-font: Oswald, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--base-font);
+}
+
+body {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-family: var(--accent-font);
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 23rem;
+  height: 31rem;
+  margin: 1rem;
+  font-size: 1rem;
+  background: #35878a;
+  /* display: flex; */
+}
+
+.card-img {
+  width: 100%;
+  height: 14em;
+  object-fit: cover;
+}
+
+.card-content {
+  height: 100%;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--accent-font);
+}
+
+.card-read-time {
+  line-height: 1;
+  opacity: .75;
+}
+
+.card-read-time span {
+  display: block;
+}
+
+.card-btn {
+  padding: .5rem 1.5rem;
+  background-color: #4dc5c9;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .card {
+    max-width: 47rem;
+    height: 18rem;
+    flex-direction: row;
+  }
+
+  .card-img {
+    height: 100%;
+    width: 13rem;
+  }
+
+  .card-content {
+    height: auto;
+    padding-right: 5rem;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+}
