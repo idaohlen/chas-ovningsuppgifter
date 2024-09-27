@@ -1,0 +1,70 @@
+:root {
+  --blue:#34495f;
+  --pink: #f71a7b;
+
+  --bg: var(--blue);
+  --primary: var(--pink);
+  --link: white;
+  --link-hover: var(--pink);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-size: 17px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--bg);
+}
+
+nav a {
+  display: block;
+  padding: .3rem;
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--primary);
+}
+nav a:hover {
+  color: var(--link-hover);
+  border-bottom-color: transparent;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  nav {
+    --bg: white;
+    --link: var(--blue);
+    max-width: 800px;
+    margin: 2rem 6rem;
+    padding: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgb(207, 207, 207);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    justify-content: flex-end;
+
+  }
+}
