@@ -10,4 +10,4 @@
 - code-along/ (Code along flexbox övning onsdag 25/9)
 
 ## Vecka 40
-- css-rwd-excercises-with-flexbox-main/ (responsiva designövningar)
+- css-rwd-excercises-with-flexbox-main/ (responsiv design-övningar)
