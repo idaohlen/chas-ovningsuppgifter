@@ -8,3 +8,6 @@
 ## Vecka 39
 - css--flexbox-excercises-main/ (Flexbox-övningar)
 - code-along/ (Code along flexbox övning onsdag 25/9)
+
+## Vecka 40
+- css-rwd-excercises-with-flexbox-main/ (responsiva designövningar)
