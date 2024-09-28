@@ -1,0 +1,90 @@
+:root {
+  --primary: #1a7cf9;
+  --primary-light: #5ca2ff;
+  --primary-lighter: #8cd1ff;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  font-size: .9rem;
+}
+
+.panel {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #888888;
+  text-align: center;
+}
+
+.pricing-img {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.pricing-img img {
+  width: 100%;
+}
+
+.pricing-header {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 1.5rem 1rem 4rem 1rem;
+}
+
+.pricing-features {
+  color: var(--primary);
+}
+
+.pricing-features-item {
+  padding: 1rem;
+  font-weight: 650;
+  letter-spacing: 1px;
+  border-top: 2px solid #e3f1ff;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 2px solid #e3f1ff;
+}
+
+.pricing-price {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.pricing-button {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1rem 1.8rem;
+  border: 2px solid var(--primary-lighter);
+  border-radius: 15px;
+  color: var(--primary);
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.pricing-button:hover {
+  background: var(--primary-light);
+  color: white;
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .pricing-plan {
+  border-left: 1px solid var(--primary-lighter);
+}
+}
