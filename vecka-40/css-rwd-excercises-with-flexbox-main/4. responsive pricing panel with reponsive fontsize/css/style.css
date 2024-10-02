@@ -84,7 +84,7 @@ body {
     flex-direction: row;
   }
 
-  .pricing-plan {
-  border-left: 1px solid var(--primary-lighter);
-}
+  .pricing-plan:not(:first-child) {
+    border-left: 1px solid var(--primary-lighter);
+  }
 }
