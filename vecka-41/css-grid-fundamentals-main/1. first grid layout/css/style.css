@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --black: #00035f;
+    --red: #F25B43;
+    --light-yellow: #F7DB72;
+    --yellow: #FAA528;
+    --cerise: #C13291;  
+    --purple: #793DC3;
+    --blue: #67A1CE;
+    font-size: 18px;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 1rem;
+}
+
+p {
+	margin: 0;
+	padding: 1.5rem 1rem;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+	line-height: 1.5;
+    color: var(--black); 
+
+     
+}
+
+.container > * {
+    padding: 1em 2em;
+}
+
+
+.container {
+    /* Define CSS Grid template here */
+    display: grid;
+    grid-template-columns: 1fr repeat(6, minmax(auto, 10rem)) 1fr;
+    grid-template-rows: auto 1fr auto auto;
+}
+
+.header {
+    grid-column: span 8;
+}
+
+.main-content {
+    grid-column: 2 / span 4;
+}
+
+.sidebar {
+    grid-column: 6 / span 2;
+}
+
+.adspace-1 {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
+
+.adspace-2 {
+    grid-column: 5 / span 3;
+    grid-row: 3;
+}
+
+.footer {
+    grid-column: span 8;
+}
