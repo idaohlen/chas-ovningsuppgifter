@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #e3e3e3;
+  font-size: 1.6rem;
+}
+
+h1, h2 {
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: .8rem 1rem;
+  font-family: inherit;
+  color: white;
+  background: #27a237;
+  border: 1px solid #1f8f4a;
+  border-radius: 6px;
+
+  &:hover {
+    background: #23ae59;
+  }
+}
+
+.wrapper {
+  padding: 4rem;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.grid-item {
+  padding: 2rem;
+  background: white;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.grid-item__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.grid-item__price {
+  margin-bottom: 1rem;
+}
+
+.items-list {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.list-item__price {
+
+}
+
+.btn--warning {
+  background: #cd5444;
+  border: 1px solid #a13d30;
+  &:hover {
+    background: #e06150;
+  }
+}
+
+.btn--info {
+  background: #279ddd;
+  border: 1px solid #096ca0;
+  &:hover {
+    background: #33b0f3;
+  }
+}
+
+button.small {
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn--submit {
+  width: 100%;
+  margin: 2rem 0;
+}
