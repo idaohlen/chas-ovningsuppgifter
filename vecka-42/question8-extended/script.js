@@ -1,8 +1,10 @@
+// Select DOM elements
 const productsContainer = document.querySelector(".products");
 const cartContainer = document.querySelector(".cart");
 const checkoutButton = document.querySelector(".btn-checkout");
 const cartTotalSumLabel = document.querySelector(".cartTotalSumLabel");
 
+// Available products
 const products = [
   { id: "001", title: "Jeans", price: 200 },
   { id: "002", title: "T-shirt", price: 170 },
@@ -12,16 +14,20 @@ const products = [
 let cart = [];
 let cartTotal = 0;
 
+// Find a product from available products by id
 function findProductById(productId) {
   return products.find(product => product.id === productId);
 }
 
+// Get a product or cart id by looking through the classlist of an element
+// The class should consist of a prefix followed by a separator and then the id
 function getIdFromClass(classList, prefix, separator) {
   const idClass = [...classList].find(name => name.startsWith(prefix + separator));
   const id = idClass.split(separator)[1];
   return id;
 }
 
+// Update the cartTotal variable as well as the DOM label
 function updateCartTotal() {
   cartTotal = 0;
   cart.forEach(item => {
@@ -30,7 +36,8 @@ function updateCartTotal() {
   cartTotalSumLabel.textContent = cartTotal;
 }
 
-function renderArticles() {
+// Render the grid containing available products
+function renderProducts() {
   productsContainer.innerHTML = "";
   products.forEach(product => {
     productsContainer.innerHTML += `
@@ -42,7 +49,8 @@ function renderArticles() {
   });
 }
 
-function renderCart() {
+// Render the product elements inside the cart
+const renderCart = () => {
   cartContainer.innerHTML = "";
   cart.forEach(item => {
     const product = findProductById(item[0]);
@@ -57,19 +65,21 @@ function renderCart() {
   });
 }
 
-function addToCart(productId) {
+// Add product to cart
+const addToCart = (productId) => {
   const cartId = String(Date.now() + Math.random()).replace(".", "");
   cart.push([productId, cartId]);
   renderCart();
 }
 
-function removeFromCart(cartId) {
+// Remove product from cart
+const removeFromCart = (cartId) => {
   cart = cart.filter(product => product[1] !== cartId);
   renderCart();
 }
 
+// Event delegation
 document.querySelector("body").addEventListener("click", (e) => {
-  // console.log(e);
 
   // Add to cart
   if (e.target.classList.contains("btn-addToCart")) {
@@ -93,7 +103,7 @@ document.querySelector("body").addEventListener("click", (e) => {
   }
 });
 
-renderArticles();
+renderProducts();
 
 // const payment = 2000;
 // const totalPrice = 850;
